@@ -4,7 +4,7 @@ namespace FedEx\AddressValidationService\ComplexType;
 use FedEx\AbstractComplexType;
 
 /**
- * Two part authentication string used for the sender's identity.
+ * Two part authentication string used for the sender's identity
  *
  * @author      Jeremy Dunn <jeremy@jsdunn.info>
  * @package     PHP FedEx API wrapper
@@ -22,7 +22,7 @@ class WebAuthenticationCredential
     protected $_name = 'WebAuthenticationCredential';
 
     /**
-     * Identifying part of the authentication key. This value is provided by FedEx after registration.
+     * Identifying part of authentication credential. This value is provided by FedEx after registration
      *
      * @param string $key
      * @return WebAuthenticationCredential
@@ -34,7 +34,7 @@ class WebAuthenticationCredential
     }
     
     /**
-     * Returns Identifying part of the authentication key. This value is provided by FedEx after registration.
+     * Returns Identifying part of authentication credential. This value is provided by FedEx after registration
      *
      * @return string
      */
@@ -44,7 +44,7 @@ class WebAuthenticationCredential
     }
     
     /**
-     * Secret part of authentication key used for authentication. This value is provided by FedEx after registration.
+     * Secret part of authentication key. This value is provided by FedEx after registration.
      *
      * @param string $password
      * @return WebAuthenticationCredential
@@ -56,7 +56,7 @@ class WebAuthenticationCredential
     }
     
     /**
-     * Returns Secret part of authentication key used for authentication. This value is provided by FedEx after registration.
+     * Returns Secret part of authentication key. This value is provided by FedEx after registration.
      *
      * @return string
      */

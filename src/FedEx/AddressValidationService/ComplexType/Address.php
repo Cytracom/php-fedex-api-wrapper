@@ -4,7 +4,7 @@ namespace FedEx\AddressValidationService\ComplexType;
 use FedEx\AbstractComplexType;
 
 /**
- * The descriptive data for a physical location.
+ * Descriptive data for a physical location. May be used as an actual physical address (place to which one could go), or as a container of "address parts" which should be handled as a unit (such as a city-state-ZIP combination within the US).
  *
  * @author      Jeremy Dunn <jeremy@jsdunn.info>
  * @package     PHP FedEx API wrapper
@@ -88,7 +88,7 @@ class Address
     }
     
     /**
-     * Identification of a region (usually small) for mail/package delivery. Format and presence of this field will vary, depending on country. This element is required if both the City and StateOrProvinceCode are not present.
+     * Identification of a region (usually small) for mail/package delivery. Format and presence of this field will vary, depending on country.
      *
      * @param string $postalCode
      * @return Address
@@ -100,7 +100,7 @@ class Address
     }
     
     /**
-     * Returns Identification of a region (usually small) for mail/package delivery. Format and presence of this field will vary, depending on country. This element is required if both the City and StateOrProvinceCode are not present.
+     * Returns Identification of a region (usually small) for mail/package delivery. Format and presence of this field will vary, depending on country.
      *
      * @return string
      */
@@ -110,7 +110,7 @@ class Address
     }
     
     /**
-     * Relevant only to addresses in Puerto Rico. In Puerto Rico, multiple addresses within the same ZIP code can have the same house number and street name. When this is the case, the urbanization code is needed to distinguish them.
+     * Relevant only to addresses in Puerto Rico.
      *
      * @param string $urbanizationCode
      * @return Address
@@ -122,7 +122,7 @@ class Address
     }
     
     /**
-     * Returns Relevant only to addresses in Puerto Rico. In Puerto Rico, multiple addresses within the same ZIP code can have the same house number and street name. When this is the case, the urbanization code is needed to distinguish them.
+     * Returns Relevant only to addresses in Puerto Rico.
      *
      * @return string
      */
@@ -132,7 +132,7 @@ class Address
     }
     
     /**
-     * Identification of a country.
+     * The two-letter code used to identify a country.
      *
      * @param string $countryCode
      * @return Address
@@ -144,7 +144,7 @@ class Address
     }
     
     /**
-     * Returns Identification of a country.
+     * Returns The two-letter code used to identify a country.
      *
      * @return string
      */
@@ -154,7 +154,29 @@ class Address
     }
     
     /**
-     * Indicates whether this address is residential (as opposed to commercial).
+     * The fully spelt out name of a country.
+     *
+     * @param string $countryName
+     * @return Address
+     */
+    public function setCountryName($countryName)
+    {
+        $this->CountryName = $countryName;
+        return $this;
+    }
+    
+    /**
+     * Returns The fully spelt out name of a country.
+     *
+     * @return string
+     */
+    public function getCountryName()
+    {
+        return $this->CountryName;
+    }
+    
+    /**
+     * Indicates whether this address residential (as opposed to commercial).
      *
      * @param boolean $residential
      * @return Address
@@ -166,7 +188,7 @@ class Address
     }
     
     /**
-     * Returns Indicates whether this address is residential (as opposed to commercial).
+     * Returns Indicates whether this address residential (as opposed to commercial).
      *
      * @return boolean
      */

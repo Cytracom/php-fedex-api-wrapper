@@ -22,7 +22,7 @@ class AddressValidationRequest
     protected $_name = 'AddressValidationRequest';
 
     /**
-     * The descriptive data to be used in authentication of the sender's identity (and right to use FedEx web services).
+     * Descriptive data to be used in authentication of the sender's identity (and right to use FedEx web services).
      *
      * @param WebAuthenticationDetail $webAuthenticationDetail
      * @return AddressValidationRequest
@@ -34,7 +34,7 @@ class AddressValidationRequest
     }
     
     /**
-     * Returns The descriptive data to be used in authentication of the sender's identity (and right to use FedEx web services).
+     * Returns Descriptive data to be used in authentication of the sender's identity (and right to use FedEx web services).
      *
      * @return WebAuthenticationDetail
      */
@@ -44,7 +44,7 @@ class AddressValidationRequest
     }
     
     /**
-     * Descriptive data identifying the client submitting the transaction.
+     * Set ClientDetail
      *
      * @param ClientDetail $clientDetail
      * @return AddressValidationRequest
@@ -56,7 +56,7 @@ class AddressValidationRequest
     }
     
     /**
-     * Returns Descriptive data identifying the client submitting the transaction.
+     * Returns Set ClientDetail
      *
      * @return ClientDetail
      */
@@ -66,7 +66,7 @@ class AddressValidationRequest
     }
     
     /**
-     * Descriptive data for this customer transaction. The TransactionDetail from the request is echoed back to the caller in the corresponding reply.
+     * Set TransactionDetail
      *
      * @param TransactionDetail $transactionDetail
      * @return AddressValidationRequest
@@ -78,7 +78,7 @@ class AddressValidationRequest
     }
     
     /**
-     * Returns Descriptive data for this customer transaction. The TransactionDetail from the request is echoed back to the caller in the corresponding reply.
+     * Returns Set TransactionDetail
      *
      * @return TransactionDetail
      */
@@ -88,7 +88,7 @@ class AddressValidationRequest
     }
     
     /**
-     * Identifies the version/level of a service operation expected by a caller (in each request) and performed by the callee (in each reply).
+     * Set Version
      *
      * @param VersionId $version
      * @return AddressValidationRequest
@@ -100,7 +100,7 @@ class AddressValidationRequest
     }
     
     /**
-     * Returns Identifies the version/level of a service operation expected by a caller (in each request) and performed by the callee (in each reply).
+     * Returns Set Version
      *
      * @return VersionId
      */
@@ -110,47 +110,25 @@ class AddressValidationRequest
     }
     
     /**
-     * Set RequestTimestamp
+     * Set InEffectAsOfTimestamp
      *
-     * @param dateTime $requestTimestamp
+     * @param dateTime $inEffectAsOfTimestamp
      * @return AddressValidationRequest
      */
-    public function setRequestTimestamp($requestTimestamp)
+    public function setInEffectAsOfTimestamp($inEffectAsOfTimestamp)
     {
-        $this->RequestTimestamp = $requestTimestamp;
+        $this->InEffectAsOfTimestamp = $inEffectAsOfTimestamp;
         return $this;
     }
     
     /**
-     * Returns Set RequestTimestamp
+     * Returns Set InEffectAsOfTimestamp
      *
      * @return dateTime
      */
-    public function getRequestTimestamp()
+    public function getInEffectAsOfTimestamp()
     {
-        return $this->RequestTimestamp;
-    }
-    
-    /**
-     * Set Options
-     *
-     * @param AddressValidationOptions $options
-     * @return AddressValidationRequest
-     */
-    public function setOptions(AddressValidationOptions $options)
-    {
-        $this->Options = $options;
-        return $this;
-    }
-    
-    /**
-     * Returns Set Options
-     *
-     * @return AddressValidationOptions
-     */
-    public function getOptions()
-    {
-        return $this->Options;
+        return $this->InEffectAsOfTimestamp;
     }
     
     /**

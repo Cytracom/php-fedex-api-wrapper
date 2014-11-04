@@ -4,7 +4,7 @@ namespace FedEx\AddressValidationService\ComplexType;
 use FedEx\AbstractComplexType;
 
 /**
- * Descriptive data for this customer transaction. The TransactionDetail from the request is echoed back to the caller in the corresponding reply.
+ * TransactionDetail
  *
  * @author      Jeremy Dunn <jeremy@jsdunn.info>
  * @package     PHP FedEx API wrapper
@@ -22,7 +22,7 @@ class TransactionDetail
     protected $_name = 'TransactionDetail';
 
     /**
-     * Identifies a customer-supplied unique identifier for this transaction. It is returned in the reply message to aid in matching requests to replies.
+     * Free form text to be echoed back in the reply. Used to match requests and replies.
      *
      * @param string $customerTransactionId
      * @return TransactionDetail
@@ -34,7 +34,7 @@ class TransactionDetail
     }
     
     /**
-     * Returns Identifies a customer-supplied unique identifier for this transaction. It is returned in the reply message to aid in matching requests to replies.
+     * Returns Free form text to be echoed back in the reply. Used to match requests and replies.
      *
      * @return string
      */
@@ -44,7 +44,7 @@ class TransactionDetail
     }
     
     /**
-     * Governs any future language/translations applied to the data payload(contrasted with ClientDetail.localization, which governs Notification.localizedMessage language selection).
+     * Governs data payload language/translations (contrasted with ClientDetail.localization, which governs Notification.localizedMessage language selection).
      *
      * @param Localization $localization
      * @return TransactionDetail
@@ -56,7 +56,7 @@ class TransactionDetail
     }
     
     /**
-     * Returns Governs any future language/translations applied to the data payload(contrasted with ClientDetail.localization, which governs Notification.localizedMessage language selection).
+     * Returns Governs data payload language/translations (contrasted with ClientDetail.localization, which governs Notification.localizedMessage language selection).
      *
      * @return Localization
      */

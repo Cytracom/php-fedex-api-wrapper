@@ -22,47 +22,47 @@ class AddressToValidate
     protected $_name = 'AddressToValidate';
 
     /**
-     * Set AddressId
+     * A reference id provided by the client.
      *
-     * @param string $addressId
+     * @param string $clientReferenceId
      * @return AddressToValidate
      */
-    public function setAddressId($addressId)
+    public function setClientReferenceId($clientReferenceId)
     {
-        $this->AddressId = $addressId;
+        $this->ClientReferenceId = $clientReferenceId;
         return $this;
     }
     
     /**
-     * Returns Set AddressId
+     * Returns A reference id provided by the client.
      *
      * @return string
      */
-    public function getAddressId()
+    public function getClientReferenceId()
     {
-        return $this->AddressId;
+        return $this->ClientReferenceId;
     }
     
     /**
-     * Set CompanyName
+     * Set Contact
      *
-     * @param string $companyName
+     * @param Contact $contact
      * @return AddressToValidate
      */
-    public function setCompanyName($companyName)
+    public function setContact(Contact $contact)
     {
-        $this->CompanyName = $companyName;
+        $this->Contact = $contact;
         return $this;
     }
     
     /**
-     * Returns Set CompanyName
+     * Returns Set Contact
      *
-     * @return string
+     * @return Contact
      */
-    public function getCompanyName()
+    public function getContact()
     {
-        return $this->CompanyName;
+        return $this->Contact;
     }
     
     /**

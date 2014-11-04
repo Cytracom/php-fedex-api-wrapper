@@ -44,7 +44,7 @@ class VersionId
     }
     
     /**
-     * Identifies the service business level. For the initial FedEx Web Service release this value should be set to 1.
+     * Identifies the service business level.
      *
      * @param int $major
      * @return VersionId
@@ -56,7 +56,7 @@ class VersionId
     }
     
     /**
-     * Returns Identifies the service business level. For the initial FedEx Web Service release this value should be set to 1.
+     * Returns Identifies the service business level.
      *
      * @return int
      */
@@ -66,7 +66,7 @@ class VersionId
     }
     
     /**
-     * Identifies the service interface level. For the initial FedEx Web Service release this value should be set to 0.
+     * Identifies the service interface level.
      *
      * @param int $intermediate
      * @return VersionId
@@ -78,7 +78,7 @@ class VersionId
     }
     
     /**
-     * Returns Identifies the service interface level. For the initial FedEx Web Service release this value should be set to 0.
+     * Returns Identifies the service interface level.
      *
      * @return int
      */
@@ -88,7 +88,7 @@ class VersionId
     }
     
     /**
-     * Identifies the service code level. For the initial FedEx Web Service release this value should be set to 0.
+     * Identifies the service code level.
      *
      * @param int $minor
      * @return VersionId
@@ -100,7 +100,7 @@ class VersionId
     }
     
     /**
-     * Returns Identifies the service code level. For the initial FedEx Web Service release this value should be set to 0.
+     * Returns Identifies the service code level.
      *
      * @return int
      */

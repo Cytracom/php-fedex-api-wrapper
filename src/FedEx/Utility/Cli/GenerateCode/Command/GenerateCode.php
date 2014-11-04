@@ -115,7 +115,7 @@ class GenerateCode extends Console\Command\Command
 
 
         //AddressValidationService
-        $wsdlPath = $fedexSrcDir . '/_wsdl/AddressValidationService_v2.wsdl';
+        $wsdlPath = $fedexSrcDir . '/_wsdl/AddressValidationService_v3.wsdl';
 
         $baseNamespace = 'FedEx\AddressValidationService';
         $subPackageName = 'Address Validation Service';
