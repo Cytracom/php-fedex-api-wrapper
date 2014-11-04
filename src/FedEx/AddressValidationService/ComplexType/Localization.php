@@ -4,7 +4,7 @@ namespace FedEx\AddressValidationService\ComplexType;
 use FedEx\AbstractComplexType;
 
 /**
- * Governs any future language/translations used for human-readable text.
+ * Identifies the representation of human-readable text.
  *
  * @author      Jeremy Dunn <jeremy@jsdunn.info>
  * @package     PHP FedEx API wrapper
@@ -22,10 +22,10 @@ class Localization
     protected $_name = 'Localization';
 
     /**
-     * Identifies the language to use for human-readable messages.
+     * Two-letter code for language (e.g. EN, FR, etc.)
      *
      * @param string $languageCode
-     * return Localization
+     * @return Localization
      */
     public function setLanguageCode($languageCode)
     {
@@ -34,15 +34,35 @@ class Localization
     }
     
     /**
-     * Identifies the locale (i.e.  country code) associated with the language.
+     * Returns Two-letter code for language (e.g. EN, FR, etc.)
+     *
+     * @return string
+     */
+    public function getLanguageCode()
+    {
+        return $this->LanguageCode;
+    }
+    
+    /**
+     * Two-letter code for the region (e.g. us, ca, etc..).
      *
      * @param string $localeCode
-     * return Localization
+     * @return Localization
      */
     public function setLocaleCode($localeCode)
     {
         $this->LocaleCode = $localeCode;
         return $this;
+    }
+    
+    /**
+     * Returns Two-letter code for the region (e.g. us, ca, etc..).
+     *
+     * @return string
+     */
+    public function getLocaleCode()
+    {
+        return $this->LocaleCode;
     }
     
 

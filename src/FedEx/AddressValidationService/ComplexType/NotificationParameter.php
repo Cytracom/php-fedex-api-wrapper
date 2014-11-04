@@ -22,10 +22,10 @@ class NotificationParameter
     protected $_name = 'NotificationParameter';
 
     /**
-     * Name identifiying the type of the data in the element 'Value'
+     * Identifies the type of data contained in Value (e.g. SERVICE_TYPE, PACKAGE_SEQUENCE, etc..).
      *
      * @param string $id
-     * return NotificationParameter
+     * @return NotificationParameter
      */
     public function setId($id)
     {
@@ -34,15 +34,35 @@ class NotificationParameter
     }
     
     /**
-     * The value that was used as the replacement parameter.
+     * Returns Identifies the type of data contained in Value (e.g. SERVICE_TYPE, PACKAGE_SEQUENCE, etc..).
+     *
+     * @return string
+     */
+    public function getId()
+    {
+        return $this->Id;
+    }
+    
+    /**
+     * The value of the parameter (e.g. PRIORITY_OVERNIGHT, 2, etc..).
      *
      * @param string $value
-     * return NotificationParameter
+     * @return NotificationParameter
      */
     public function setValue($value)
     {
         $this->Value = $value;
         return $this;
+    }
+    
+    /**
+     * Returns The value of the parameter (e.g. PRIORITY_OVERNIGHT, 2, etc..).
+     *
+     * @return string
+     */
+    public function getValue()
+    {
+        return $this->Value;
     }
     
 

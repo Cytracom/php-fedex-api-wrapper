@@ -22,10 +22,10 @@ class AddressValidationRequest
     protected $_name = 'AddressValidationRequest';
 
     /**
-     * The descriptive data to be used in authentication of the sender's identity (and right to use FedEx web services).
+     * Descriptive data to be used in authentication of the sender's identity (and right to use FedEx web services).
      *
      * @param WebAuthenticationDetail $webAuthenticationDetail
-     * return AddressValidationRequest
+     * @return AddressValidationRequest
      */
     public function setWebAuthenticationDetail(WebAuthenticationDetail $webAuthenticationDetail)
     {
@@ -34,10 +34,20 @@ class AddressValidationRequest
     }
     
     /**
-     * Descriptive data identifying the client submitting the transaction.
+     * Returns Descriptive data to be used in authentication of the sender's identity (and right to use FedEx web services).
+     *
+     * @return WebAuthenticationDetail
+     */
+    public function getWebAuthenticationDetail()
+    {
+        return $this->WebAuthenticationDetail;
+    }
+    
+    /**
+     * Set ClientDetail
      *
      * @param ClientDetail $clientDetail
-     * return AddressValidationRequest
+     * @return AddressValidationRequest
      */
     public function setClientDetail(ClientDetail $clientDetail)
     {
@@ -46,10 +56,20 @@ class AddressValidationRequest
     }
     
     /**
-     * Descriptive data for this customer transaction. The TransactionDetail from the request is echoed back to the caller in the corresponding reply.
+     * Returns Set ClientDetail
+     *
+     * @return ClientDetail
+     */
+    public function getClientDetail()
+    {
+        return $this->ClientDetail;
+    }
+    
+    /**
+     * Set TransactionDetail
      *
      * @param TransactionDetail $transactionDetail
-     * return AddressValidationRequest
+     * @return AddressValidationRequest
      */
     public function setTransactionDetail(TransactionDetail $transactionDetail)
     {
@@ -58,10 +78,20 @@ class AddressValidationRequest
     }
     
     /**
-     * Identifies the version/level of a service operation expected by a caller (in each request) and performed by the callee (in each reply).
+     * Returns Set TransactionDetail
+     *
+     * @return TransactionDetail
+     */
+    public function getTransactionDetail()
+    {
+        return $this->TransactionDetail;
+    }
+    
+    /**
+     * Set Version
      *
      * @param VersionId $version
-     * return AddressValidationRequest
+     * @return AddressValidationRequest
      */
     public function setVersion(VersionId $version)
     {
@@ -70,39 +100,57 @@ class AddressValidationRequest
     }
     
     /**
-     * Set RequestTimestamp
+     * Returns Set Version
      *
-     * @param dateTime $requestTimestamp
-     * return AddressValidationRequest
+     * @return VersionId
      */
-    public function setRequestTimestamp($requestTimestamp)
+    public function getVersion()
     {
-        $this->RequestTimestamp = $requestTimestamp;
+        return $this->Version;
+    }
+    
+    /**
+     * Set InEffectAsOfTimestamp
+     *
+     * @param dateTime $inEffectAsOfTimestamp
+     * @return AddressValidationRequest
+     */
+    public function setInEffectAsOfTimestamp($inEffectAsOfTimestamp)
+    {
+        $this->InEffectAsOfTimestamp = $inEffectAsOfTimestamp;
         return $this;
     }
     
     /**
-     * Set Options
+     * Returns Set InEffectAsOfTimestamp
      *
-     * @param AddressValidationOptions $options
-     * return AddressValidationRequest
+     * @return dateTime
      */
-    public function setOptions(AddressValidationOptions $options)
+    public function getInEffectAsOfTimestamp()
     {
-        $this->Options = $options;
-        return $this;
+        return $this->InEffectAsOfTimestamp;
     }
     
     /**
      * Set AddressesToValidate
      *
      * @param AddressToValidate[] $addressesToValidate
-     * return AddressValidationRequest
+     * @return AddressValidationRequest
      */
     public function setAddressesToValidate(array $addressesToValidate)
     {
         $this->AddressesToValidate = $addressesToValidate;
         return $this;
+    }
+    
+    /**
+     * Returns Set AddressesToValidate
+     *
+     * @return AddressToValidate[]
+     */
+    public function getAddressesToValidate()
+    {
+        return $this->AddressesToValidate;
     }
     
 
