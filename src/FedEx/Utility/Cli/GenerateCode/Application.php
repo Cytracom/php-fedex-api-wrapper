@@ -1,7 +1,7 @@
 <?php
 namespace FedEx\Utility\Cli\GenerateCode;
 
-use     Symfony\Component\Console\Application as SymfonyConsoleApplication;
+use Symfony\Component\Console\Application as SymfonyConsoleApplication;
 
 /**
  * CLI Application to generate code from WSDLs
